@@ -1,19 +1,33 @@
 .country-preview-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
+  grid-template-columns: 1fr 0.2fr;
   align-items: center;
   border-radius: 4px;
   padding: 10px;
-  .country-name {
-    width: 195px;
-    font-size: 14px;
-    @include for-narrow-layout {
-      font-size: 12px;
+  @include for-wide-layout {
+    grid-template-columns: 1fr 0.5fr;
+  }
+  @include for-mobile-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+  .img-wrapper {
+    gap: 10px;
+    img {
+      height: 30px;
+      width: 50px;
+      @include for-mobile-layout {
+        height: 20px;
+        width: 40px;
+      }
+    }
+    .numericCode {
+      width: 40px;
     }
   }
-  img {
-    height: 30px;
+  span {
+    @include for-mobile-layout {
+      font-size: 14px;
+    }
   }
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,

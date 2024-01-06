@@ -5,4 +5,8 @@
   font-weight: bolder;
   font-family: kanit-semibold;
   color: $mainColor;
+  @include for-mobile-layout {
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
 }

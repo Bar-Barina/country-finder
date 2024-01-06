@@ -8,6 +8,13 @@
     height: 50px;
     font-size: 16px;
     margin: 10px 0;
+    @include for-tablet-layout {
+      height: 40px;
+    }
+    @include for-mobile-layout {
+      height: 30px;
+      margin: 5px 0;
+    }
     &:focus {
       border: 1px solid lightgray;
       outline: none;
