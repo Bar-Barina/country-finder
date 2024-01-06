@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import { apiService } from '../services/api.service'
 import { utilService } from '../services/util.service'
-import CountryPreview from './CountryPreview'
+import CountryList from './CountryList'
 
 function LiveSearch() {
   const [query, setQuery] = useState('')
@@ -15,7 +15,7 @@ function LiveSearch() {
     const fetchData = async () => {
       try {
         setError(null)
-        // Use the apiService to get countries list
+        // Using the apiService to get the countries list
         const countriesList = await apiService.getCountriesList()
         console.log('list from UE', countriesList)
         setResults(countriesList)
@@ -28,7 +28,6 @@ function LiveSearch() {
   }, []) // Run this effect only once when the component mounts
 
   function handleInputChange(e) {
-    console.log('value from component', e.target.value)
     setQuery(e.target.value)
   }
 
@@ -41,16 +40,13 @@ function LiveSearch() {
         value={query}
         onChange={handleInputChange}
       />
+      {/* Checking if there is results and query, then sending the filtered results to the CountryList cmp */}
       {results && query && (
-        <section className='results-container'>
-          {results
-            .filter((country) =>
-              country.name.toLowerCase().startsWith(query.toLowerCase())
-            )
-            .map((country) => (
-              <CountryPreview key={country.alpha3Code} country={country} />
-            ))}
-        </section>
+        <CountryList
+          countries={results.filter((country) =>
+            country.name.toLowerCase().startsWith(query.toLowerCase())
+          )}
+        />
       )}
     </section>
   )
