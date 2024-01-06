@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import { apiService } from '../services/api.service'
+import { utilService } from '../services/util.service'
 
 function LiveSearch() {
   const [query, setQuery] = useState('')
@@ -43,8 +44,7 @@ function LiveSearch() {
               country.name.toLowerCase().includes(query.toLowerCase())
             )
             .map((country) => (
-              // Need to change key to a unique value!
-              <div key={country.name}>
+              <div key={utilService.makeId()}>
                 <div>{country.name}</div>
                 <img src={country.symbol} alt='Country symbol' />
               </div>
