@@ -18,7 +18,9 @@ body {
   &.no-scroll {
     overflow: hidden;
   }
-  // background: linear-gradient(to left, #dce7f8, #eeeded);
+  @include for-mobile-layout {
+    padding: 0 30px;
+  }
 }
 
 img {
