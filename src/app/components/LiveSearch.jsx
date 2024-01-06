@@ -7,6 +7,8 @@ function LiveSearch() {
   const [query, setQuery] = useState('')
   const [results, setResults] = useState([])
   const [error, setError] = useState(null)
+  // FOR LATER USE!
+  const debounce = utilService.debounce()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -41,12 +43,12 @@ function LiveSearch() {
         <section>
           {results
             .filter((country) =>
-              country.name.toLowerCase().includes(query.toLowerCase())
+              country.name.toLowerCase().startsWith(query.toLowerCase())
             )
             .map((country) => (
               <div key={utilService.makeId()}>
                 <div>{country.name}</div>
-                <img src={country.symbol} alt='Country symbol' />
+                <img src={country.flags.png} alt='Country flag' />
               </div>
             ))}
         </section>

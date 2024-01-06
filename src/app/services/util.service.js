@@ -1,6 +1,12 @@
 // FOR LATER USE !
 
-function debounce() {}
+function debounce(func, delay) {
+  let timeoutId
+  return (...args) => {
+    clearTimeout(timeoutId)
+    timeoutId = setTimeout(() => func(...args), delay)
+  }
+}
 
 function makeId(length = 5) {
   var text = ''
