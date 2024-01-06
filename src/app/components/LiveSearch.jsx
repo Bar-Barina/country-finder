@@ -13,7 +13,7 @@ function LiveSearch() {
         setError(null)
         // Use the apiService to get countries list
         const countriesList = await apiService.getCountriesList()
-        console.log('list from component', countriesList)
+        console.log('list from UE', countriesList)
         setResults(countriesList)
       } catch (error) {
         setError('Error fetching data')
