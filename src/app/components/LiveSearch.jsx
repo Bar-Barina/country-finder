@@ -33,15 +33,16 @@ function LiveSearch() {
   }
 
   return (
-    <section className='main-container'>
+    <section className='live-search-container flex column'>
       <input
+        className='flex auto-center'
         type='text'
         placeholder='Search for a country'
         value={query}
         onChange={handleInputChange}
       />
       {results && query && (
-        <section className='simple-cards-grid'>
+        <section className='simple-cards-grid results-container'>
           {results
             .filter((country) =>
               country.name.toLowerCase().startsWith(query.toLowerCase())

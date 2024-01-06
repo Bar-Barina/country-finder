@@ -1,0 +1,17 @@
+.live-search-container {
+  margin: 10px 0;
+  input {
+    padding: 10px;
+    display: flex;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    height: 50px;
+    font-size: 16px;
+    margin: 10px 0;
+
+    &:focus {
+      border: 1px solid lightgray;
+      outline: none;
+    }
+  }
+}
