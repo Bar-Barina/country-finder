@@ -1,3 +1,9 @@
+import LiveSearch from './components/LiveSearch'
+
 export default function Home() {
-  return <main className=''></main>
+  return (
+    <section className='main-container'>
+      <LiveSearch />
+    </section>
+  )
 }
