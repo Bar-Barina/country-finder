@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import { apiService } from '../services/api.service'
 import { utilService } from '../services/util.service'
+import CountryPreview from './CountryPreview'
 
 function LiveSearch() {
   const [query, setQuery] = useState('')
@@ -46,10 +47,7 @@ function LiveSearch() {
               country.name.toLowerCase().startsWith(query.toLowerCase())
             )
             .map((country) => (
-              <div key={utilService.makeId()}>
-                <div>{country.name}</div>
-                <img src={country.flags.png} alt='Country flag' />
-              </div>
+              <CountryPreview key={country.alpha3Code} country={country} />
             ))}
         </section>
       )}
