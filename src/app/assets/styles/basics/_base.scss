@@ -15,6 +15,7 @@ body {
   min-height: 100vh;
   // color: $mainColor;
   padding: 0 100px;
+  background: linear-gradient(to right, #fdfdfd, #f8f9fa);
   &.no-scroll {
     overflow: hidden;
   }

@@ -2,10 +2,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
+  align-items: center;
   border-radius: 4px;
   cursor: pointer;
   padding: 10px;
-  background: linear-gradient(to right, #fdfdfd, #f3f9ff);
   .country-name {
     width: 195px;
     font-size: 14px;
