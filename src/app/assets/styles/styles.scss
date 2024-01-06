@@ -9,7 +9,7 @@
 @import 'basics/base';
 @import 'basics/helpers';
 @import 'basics/layout';
-@import 'basics/modals';
 
 // Components
-@import 'cmps/liveSearch';
+@import 'components/liveSearch';
+@import 'components/appHeader';

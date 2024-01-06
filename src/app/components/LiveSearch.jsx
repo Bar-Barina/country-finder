@@ -41,7 +41,7 @@ function LiveSearch() {
         onChange={handleInputChange}
       />
       {results && query && (
-        <section>
+        <section className='simple-cards-grid'>
           {results
             .filter((country) =>
               country.name.toLowerCase().startsWith(query.toLowerCase())
