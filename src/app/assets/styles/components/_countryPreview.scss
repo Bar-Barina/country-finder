@@ -9,6 +9,9 @@
   .country-name {
     width: 195px;
     font-size: 14px;
+    @include for-narrow-layout {
+      font-size: 12px;
+    }
   }
   img {
     height: 30px;

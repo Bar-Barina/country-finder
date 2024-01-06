@@ -2,7 +2,7 @@
 
 // Setup
 @import 'setup/mixins';
-@import 'setup/typography.scss';
+@import 'setup/typography';
 @import 'setup/variables';
 
 // Basics
@@ -11,6 +11,6 @@
 @import 'basics/layout';
 
 // Components
-@import 'components/liveSearch';
 @import 'components/appHeader';
 @import 'components/CountryPreview';
+@import 'components/liveSearch';
