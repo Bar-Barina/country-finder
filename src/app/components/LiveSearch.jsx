@@ -5,6 +5,7 @@ import { utilService } from '../services/util.service'
 import CountryList from './CountryList'
 
 function LiveSearch() {
+  // Using and modifying state here, because i don't need to use this data any other place.
   const [query, setQuery] = useState('')
   const [results, setResults] = useState([])
   const [error, setError] = useState(null)
