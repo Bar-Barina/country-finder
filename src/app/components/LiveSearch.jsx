@@ -26,7 +26,10 @@ function LiveSearch() {
       setError(null)
       setLoading(true)
       const countriesList = await apiService.getCountriesList()
-      setResults(countriesList)
+      if (query) {
+        setResults(countriesList)
+        console.log(countriesList)
+      }
     } catch (error) {
       setError('Error fetching data')
     } finally {
@@ -50,10 +53,9 @@ function LiveSearch() {
         onChange={handleInputChange}
       />
       {loading && <Loader />}
-      {error && <div className='error-message'>{error}</div>}
 
-      {/* Checking if there are no results and a query is present, then show the "No results found" message */}
-      {!loading && results.length === 0 && <NoResultsModal />}
+      {/* If there is an error fetching the data,inform the user */}
+      {error && <div className='error-message'>{error}</div>}
 
       {/* Checking if there is results and query, then sending the filtered results to the CountryList cmp */}
       {!loading && results.length > 0 && query && (

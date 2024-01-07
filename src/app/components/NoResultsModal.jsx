@@ -2,9 +2,10 @@ import React from 'react'
 
 function NoResultsModal() {
   return (
-    <div className='no-results-container'>
-      <p>No results found. Try again!</p>
-    </div>
+    <section className='no-results-container'>
+      <img src='./assets/imgs/NoResultsFound.png' alt='No Results Found'></img>
+      <div>No Results Found.</div>
+    </section>
   )
 }
 
