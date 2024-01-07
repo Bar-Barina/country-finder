@@ -4,7 +4,7 @@
 
 Country Finder is a Next.js project that allows users to search for countries based on their names and regions. The application provides a user-friendly interface with features like live search, region sorting, and a visually appealing design.
 
-![Country Finder Overview](./CountryFinderOverview.png)
+![Country Finder Overview](./public/CountryFinderOverview.png)
 
 ## Prerequisites
 
