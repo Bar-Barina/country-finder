@@ -3,7 +3,7 @@ import React from 'react'
 function NoResultsModal() {
   return (
     <section className='no-results-container'>
-      <img src='../../assets/imgs/NoResults.png' alt='No Results Found' />
+      <img src='../../NoResults.jpg' alt='No Results Found Logo' />
 
       <div>No Results Found.</div>
     </section>
