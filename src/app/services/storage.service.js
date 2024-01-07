@@ -1,3 +1,5 @@
+// Not in use as of now.
+
 function store(key, value) {
   localStorage[key] = JSON.stringify(value)
 }

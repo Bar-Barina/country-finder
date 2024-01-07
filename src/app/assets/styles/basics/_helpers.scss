@@ -10,21 +10,12 @@
   &.align-center {
     align-items: center;
   }
-  &.space-between {
-    justify-content: space-between;
-  }
-  &.space-around {
-    justify-content: space-around;
-  }
   &.auto-center {
     justify-content: center;
     align-items: center;
   }
-  > *.full-grow {
-    flex: 1;
-  }
 }
 
-.pointer {
-  cursor: pointer;
-}
+// .pointer {
+//   cursor: pointer;
+// }

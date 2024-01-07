@@ -1,4 +1,5 @@
 import axios from 'axios'
+// UnComment this in case of using the other getCountriesList function
 // import { storageService } from './storage.service'
 
 const API_BASE_URL = 'https://restcountries.com/v2'

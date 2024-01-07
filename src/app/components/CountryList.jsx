@@ -5,6 +5,7 @@ import NoResultsModal from './NoResultsModal'
 function CountryList({ countries }) {
   return (
     <section className='results-container'>
+      {/* Checking if there are no countries, if so, no results modal will render, otherwise render the results*/}
       {countries.length === 0 ? (
         <NoResultsModal />
       ) : (

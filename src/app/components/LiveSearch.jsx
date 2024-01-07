@@ -57,10 +57,10 @@ function LiveSearch() {
 
       {loading && <Loader />}
 
-      {/* If there is an error fetching the data,inform the user */}
+      {/* If there is an error fetching the data, inform the user */}
       {error && <div className='error-message'>{error}</div>}
 
-      {/* Checking if there is results and query, then sending the filtered results to the CountryList cmp */}
+      {/* Checking if there is results and query, then sending the already filtered results to the CountryList component */}
       {!loading && results.length > 0 && query && (
         <CountryList
           countries={results.filter((country) =>
