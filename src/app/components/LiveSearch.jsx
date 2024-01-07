@@ -4,6 +4,7 @@ import { apiService } from '../services/api.service'
 import { utilService } from '../services/util.service'
 import CountryList from './CountryList'
 import NoResultsModal from './NoResultsModal'
+import Loader from './Loader'
 
 function LiveSearch() {
   // Using and modifying state here, because i don't need to use this data any other place.
@@ -48,7 +49,7 @@ function LiveSearch() {
         value={query}
         onChange={handleInputChange}
       />
-      {loading && <div className='loader'>Loading...</div>}
+      {loading && <Loader />}
       {error && <div className='error-message'>{error}</div>}
 
       {/* Checking if there are no results and a query is present, then show the "No results found" message */}
