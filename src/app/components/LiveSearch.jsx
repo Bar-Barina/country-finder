@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react'
 import { apiService } from '../services/api.service'
 import { utilService } from '../services/util.service'
 import CountryList from './CountryList'
-import NoResultsModal from './NoResultsModal'
 import Loader from './Loader'
 
 function LiveSearch() {
@@ -41,6 +40,9 @@ function LiveSearch() {
     setLoading(false)
     setQuery(e.target.value)
     setLoading(true)
+    if (!results) {
+      setResults([])
+    }
   }
 
   return (
@@ -52,6 +54,7 @@ function LiveSearch() {
         value={query}
         onChange={handleInputChange}
       />
+
       {loading && <Loader />}
 
       {/* If there is an error fetching the data,inform the user */}
