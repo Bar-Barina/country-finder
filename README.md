@@ -1,4 +1,4 @@
-# Country Finder
+# Country 🌍 Finder
 
 ## Introduction
 
