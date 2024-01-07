@@ -4,7 +4,6 @@ import { apiService } from '../services/api.service'
 import { utilService } from '../services/util.service'
 import CountryList from './CountryList'
 import Loader from './Loader'
-import RegionSort from './RegionSort'
 
 function LiveSearch() {
   // Using and modifying state here, because i don't need to use this data any other place.
@@ -12,7 +11,6 @@ function LiveSearch() {
   const [results, setResults] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
-  const [selectedRegion, setSelectedRegion] = useState('')
 
   // Using the debounce function from my util service
   const debouncedFetchData = utilService.debounce(fetchData, 300)
@@ -20,26 +18,17 @@ function LiveSearch() {
   useEffect(() => {
     // Calling the debouncedFetchData function on query change
     debouncedFetchData()
-  }, [query, selectedRegion])
+  }, [query])
 
   async function fetchData() {
     try {
       setError(null)
       setLoading(true)
       const countriesList = await apiService.getCountriesList()
-      // Filter by query
-      let filteredResults = countriesList.filter((country) =>
-        country.name.toLowerCase().startsWith(query.toLowerCase())
-      )
-
-      // Filter by region if selected
-      if (selectedRegion) {
-        filteredResults = filteredResults.filter(
-          (country) => country.region === selectedRegion
-        )
+      if (query) {
+        setResults(countriesList)
+        console.log(countriesList)
       }
-      console.log(filteredResults)
-      setResults(filteredResults)
     } catch (error) {
       setError('Error fetching data')
     } finally {
@@ -56,10 +45,6 @@ function LiveSearch() {
     }
   }
 
-  const handleRegionSort = (region) => {
-    setSelectedRegion(region)
-  }
-
   return (
     <section className='live-search-container flex column'>
       <input
@@ -69,9 +54,8 @@ function LiveSearch() {
         value={query}
         onChange={handleInputChange}
       />
-      {/* Checking if there is a query, if there is, let the user sort by region */}
-      {query && <RegionSort onSort={handleRegionSort} />}
-
+      {/* Checking if there is a query, if there is, let the user sort by region
+{query && <RegionSort onSort={handleRegionSort} />} */}
       {loading && <Loader />}
 
       {/* If there is an error fetching the data, inform the user */}
@@ -79,7 +63,11 @@ function LiveSearch() {
 
       {/* Checking if there is results and query, then sending the already filtered results to the CountryList component */}
       {!loading && results.length > 0 && query && (
-        <CountryList countries={results} />
+        <CountryList
+          countries={results.filter((country) =>
+            country.name.toLowerCase().startsWith(query.toLowerCase())
+          )}
+        />
       )}
     </section>
   )
