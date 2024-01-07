@@ -1,24 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Country Finder
 
-## Getting Started
+## Introduction
 
-First, run the development server:
+Country Finder is a Next.js project that allows users to search for countries based on their names and regions. The application provides a user-friendly interface with features like live search, region sorting, and a visually appealing design.
 
-```bash
-npm run dev
-```
+## Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Make sure you have [npm](https://www.npmjs.com/) installed.
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+To get started, follow these steps:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1.  Clone the repository:
 
-## Deploy on Vercel
+    bashCopy code
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    `git clone https://github.com/Bar-Barina/country-finder.git`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2.  Navigate to the project directory:
+
+    bashCopy code
+
+    `cd country-finder`
+
+3.  Install the dependencies:
+
+    bashCopy code
+
+    `npm install`
+
+## Usage
+
+To run the development server, use the following command:
+
+bashCopy code
+
+`npm run dev`
+
+Once the development server is running, open your browser and go to http://localhost:3000 to access the Country Finder application.
+
+## Features
+
+- **Live Search:** Quickly find countries by typing in their names.
+- **Region Sorting:** Sort countries based on their regions.
+- **Error Handling:** Informative messages for users in case of data fetching errors.
+
+## How to Use
+
+1.  Enter the name of the country you want to search for in the search bar.
+2.  Optionally, use the region sorting feature to narrow down the search.
+3.  Explore the list of countries that match your search criteria.
+
+## Contributing
+
+Contributions are welcome! If you encounter any issues or have suggestions for improvement, please open an issue or create a pull request.
+
+## Acknowledgments
+
+- **API Service:** Utilizes the apiService for fetching country data.
+- **Utility Service:** Uses the utilService for debouncing search queries.
+- **Components:** Various React components are used for creating a modular and maintainable structure.
+
+Feel free to explore and enhance the project as needed. Happy coding!
