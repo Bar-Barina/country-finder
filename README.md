@@ -16,27 +16,19 @@ To get started, follow these steps:
 
 1.  Clone the repository:
 
-    bashCopy code
-
     `git clone https://github.com/Bar-Barina/country-finder.git`
 
 2.  Navigate to the project directory:
 
-    bashCopy code
-
     `cd country-finder`
 
 3.  Install the dependencies:
-
-    bashCopy code
 
     `npm install`
 
 ## Usage
 
 To run the development server, use the following command:
-
-bashCopy code
 
 `npm run dev`
 
