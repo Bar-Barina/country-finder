@@ -7,7 +7,7 @@
     input {
       padding: 20px 35px;
       display: flex;
-      border: 1px solid lightgray;
+      border: 1px solid $lightGray;
       border-radius: 4px;
       height: 50px;
       font-size: 16px;
@@ -20,13 +20,13 @@
         margin: 5px 0;
       }
       &:focus {
-        border: 1px solid lightgray;
+        border: 1px solid $lightGray;
         outline: none;
       }
     }
     span {
       padding: 7px;
-      color: #1f3998;
+      color: $israelBlue;
       font-weight: bold;
       @include for-tablet-layout {
         font-size: 14px;
@@ -37,7 +37,7 @@
       }
     }
     .heart-icon {
-      fill: #1f3998;
+      fill: $israelBlue;
     }
   }
   .search-icon {
