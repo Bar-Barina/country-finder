@@ -14,17 +14,23 @@ Make sure you have [npm](https://www.npmjs.com/) installed.
 
 To get started, follow these steps:
 
-1.  Clone the repository:
+1. Clone the repository:
 
     `git clone https://github.com/Bar-Barina/country-finder.git`
 
-2.  Navigate to the project directory:
+2. Navigate to the project directory:
 
     `cd country-finder`
 
-3.  Install the dependencies:
+3. Install the dependencies:
 
     `npm install`
+
+   Additionally, for unit testing, you will need to install the following development dependencies:
+
+    ```bash
+    npm install --save-dev jest @testing-library/react @testing-library/jest-dom babel-jest @babel/preset-env @babel/preset-react jest-environment-jsdom
+    ```
 
 ## Usage
 
@@ -34,6 +40,10 @@ To run the development server, use the following command:
 
 Once the development server is running, open your browser and go to http://localhost:3000 to access the Country Finder application.
 
+To run unit tests, use the following command:
+
+`npm test`
+
 ## Features
 
 - **Live Search:** Quickly find countries by typing in their names.
@@ -42,9 +52,9 @@ Once the development server is running, open your browser and go to http://local
 
 ## How to Use
 
-1.  Enter the name of the country you want to search for in the search bar.
-2.  Optionally, use the region sorting feature to narrow down the search.
-3.  Explore the list of countries that match your search criteria.
+1. Enter the name of the country you want to search for in the search bar.
+2. Optionally, use the region sorting feature to narrow down the search.
+3. Explore the list of countries that match your search criteria.
 
 ## Contributing
 
