@@ -1,3 +1,4 @@
+import React from 'react'
 import LiveSearch from './components/LiveSearch'
 import AppHeader from './components/AppHeader'
 import './assets/styles/styles.scss'
