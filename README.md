@@ -32,6 +32,12 @@ To get started, follow these steps:
    npm install --save-dev jest @testing-library/react @testing-library/jest-dom babel-jest @babel/preset-env @babel/preset-react jest-environment-jsdom
    ```
 
+   Additionally, for unit testing, you will need to install the following development dependencies:
+
+    ```bash
+    npm install --save-dev jest @testing-library/react @testing-library/jest-dom babel-jest @babel/preset-env @babel/preset-react jest-environment-jsdom
+    ```
+
 ## Usage
 
 To run the development server, use the following command:
