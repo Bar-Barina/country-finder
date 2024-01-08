@@ -6,6 +6,7 @@ import CountryList from './CountryList'
 import Loader from './Loader'
 import RegionSort from './RegionSort'
 import NoResultsModal from './NoResultsModal'
+import { getSvg } from '../services/svg.service'
 
 function LiveSearch() {
   const [query, setQuery] = useState('')
@@ -62,6 +63,12 @@ function LiveSearch() {
   return (
     <section className='live-search-container flex column'>
       <div className='search-wrapper'>
+        <span
+          className={'search-icon'}
+          dangerouslySetInnerHTML={{
+            __html: getSvg('search'),
+          }}
+        />
         <input
           className='flex auto-center'
           type='text'
@@ -72,7 +79,17 @@ function LiveSearch() {
         {/* Checking if there is a query, if there is, let the user sort by region */}
         {query && <RegionSort onSort={handleRegionSort} />}
 
-        {!query && <span>Supporting ISRAEL 💙</span>}
+        {!query && (
+          <div className='flex auto-center'>
+            <span>Supporting ISRAEL</span>
+            <span
+              className={'heart-icon'}
+              dangerouslySetInnerHTML={{
+                __html: getSvg('heart'),
+              }}
+            />
+          </div>
+        )}
       </div>
 
       {loading && <Loader />}

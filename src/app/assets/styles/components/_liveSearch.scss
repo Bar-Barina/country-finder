@@ -5,7 +5,7 @@
     grid-template-columns: 1fr 0.1fr;
     gap: 7px;
     input {
-      padding: 10px;
+      padding: 20px 35px;
       display: flex;
       border: 1px solid lightgray;
       border-radius: 4px;
@@ -25,7 +25,7 @@
       }
     }
     span {
-      padding: 10px;
+      padding: 7px;
       color: #1f3998;
       font-weight: bold;
       @include for-tablet-layout {
@@ -35,6 +35,20 @@
         font-size: 10px;
         padding: 5px;
       }
+    }
+    .heart-icon {
+      fill: #1f3998;
+    }
+  }
+  .search-icon {
+    position: absolute;
+    fill: #757575;
+    margin-top: 17px;
+    @include for-tablet-layout {
+      margin-top: 13px;
+    }
+    @include for-mobile-layout {
+      margin-top: 10px;
     }
   }
 }
