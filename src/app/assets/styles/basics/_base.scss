@@ -21,7 +21,7 @@ body {
   @include for-wide-layout {
     margin: 0 100px;
   }
-  @include for-mobile-layout {
+  @include for-tablet-layout {
     margin: 0 40px;
   }
 }

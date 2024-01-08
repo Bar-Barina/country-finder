@@ -38,6 +38,9 @@
     }
     .heart-icon {
       fill: $israelBlue;
+      @include for-mobile-layout {
+        display: none;
+      }
     }
   }
   .search-icon {
