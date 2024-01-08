@@ -92,6 +92,7 @@ function LiveSearch() {
         )}
       </div>
 
+      {/* Rendering the loader when needed */}
       {loading && <Loader />}
 
       {/* If there is an error fetching the data, inform the user */}
