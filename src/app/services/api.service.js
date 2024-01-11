@@ -8,7 +8,7 @@ async function getCountriesList() {
     const countriesList = response.data
     return countriesList
   } catch (error) {
-    throw new Error('Error fetching countries list')
+    throw new Error('Error fetching countries list', error)
   }
 }
 

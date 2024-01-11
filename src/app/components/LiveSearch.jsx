@@ -9,6 +9,7 @@ import NoResultsModal from './NoResultsModal'
 import { getSvg } from '../services/svg.service'
 
 function LiveSearch() {
+  // Managing state here because there is no need to reuse it.
   const [query, setQuery] = useState('')
   const [results, setResults] = useState([])
   const [loading, setLoading] = useState(false)
